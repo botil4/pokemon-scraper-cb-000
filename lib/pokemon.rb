@@ -13,7 +13,7 @@ class Pokemon
   end
 
   def self.find(index, db)
-    pk_array = db.execute("SELECT name, type FROM pokemon WHERE id = ?", [index])
+    pk_array = db.execute("SELECT name, type FROM pokemon WHERE id = ?", index)
     Pokemon.new(pk_array)
   end
 
